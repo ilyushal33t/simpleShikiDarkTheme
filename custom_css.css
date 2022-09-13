@@ -4,7 +4,7 @@
         color: #fff;
     } 
     .b-ajax:before { 	    
-        background: rgba(244, 244, 244, 1); 
+        background: rgba(20, 20, 20, 0.8);
     }
     .l-page { 
       outline: 20px solid rgba(20, 20, 20, .9); margin-bottom: 20px;
