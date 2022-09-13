@@ -47,13 +47,21 @@ window.addEventListener('locationchange', function () {
 
 
 if(document.location.host == 'shikimori.one') {
+    var CSS;
     let userCssReplace = async () => {
-        let resp = await fetch(THEME_URL)
-        custom_css.innerHTML = await resp.text()
+        let resp = await fetch(THEME_URL);
+        return await resp.text();
     }
-    userCssReplace()
+    userCssReplace().then(css => {
+        CSS = css;
+        custom_css.innerHTML = css;
+    });
 
     window.addEventListener('locationchange', function () {
-        setTimeout(userCssReplace,1000);
+        let interv = setInterval(()=> {
+            while(custom_css.innerHTML != CSS)
+                custom_css.innerHTML = CSS;
+            clearInterval(interv);
+        },1000);
     });
 }
