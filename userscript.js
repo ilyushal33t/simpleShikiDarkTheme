@@ -11,6 +11,7 @@
 
 // ==/UserScript==
 
+const THEME_URL = 'https://raw.githubusercontent.com/ilyushal33t/simpleShikiDarkTheme/main/custom_css.css';
 
 /***********************
 * thanks to this thread:
@@ -47,7 +48,7 @@ window.addEventListener('locationchange', function () {
 
 if(document.location.host == 'shikimori.one') {
     let userCssReplace = async () => {
-        let resp = await fetch('https://raw.githubusercontent.com/ilyushal33t/simpleShikiDarkTheme/main/custom_css.css')
+        let resp = await fetch(THEME_URL)
         custom_css.innerHTML = await resp.text()
     }
     userCssReplace()
