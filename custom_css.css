@@ -1,0 +1,108 @@
+@media only screen and (min-width: 100px) {
+    .l-page, .b-quote, .b-modal>.inner { 
+        background-color: rgba(20, 20, 20, 0.8); 
+        color: #fff;
+    } 
+    .b-ajax:before { 	    
+        background: rgba(244, 244, 244, 1); 
+    }
+    .l-page { 
+      outline: 20px solid rgba(20, 20, 20, .9); margin-bottom: 20px;
+    }
+    body, div.cc-3, .c-column.c-right, .l-page { 
+      background-color: rgb(20,20,20);
+      position: relative;
+      z-index: 3;
+    }
+    body:before, div.cc-3:before, .c-column.c-right:before, .l-page:before {
+      content: '';
+      z-index: -3;
+      color: #fff;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      opacity: .4;
+      filter: blur(2px);
+    }
+    body:before {
+      background: url(https://p4.wallpaperbetter.com/wallpaper/690/498/544/hello-kitty-wallpaper-preview.jpg) no-repeat fixed center/100%;
+    }
+    div.cc-3:before {
+      background: url(https://imgix.ranker.com/collection_img/1/1523/original/the-art-of-the-selfie-u8) 100% 30% no-repeat !important;
+    }
+    .c-column.c-right {
+      width: 100% !important;
+    }
+    .c-column.c-right:before {
+      background: url(https://imgix.ranker.com/user_node_img/50051/1001019803/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/70% no-repeat !important;
+    }
+    .l-page:before {
+       display: flex !important;
+       background: url(https://www.kitnipbox.com/meow/wp-content/uploads/2016/08/WeHeartIt.jpg) top/100% !important;
+       filter: grayscale(60%);
+       opacity: .16;
+    }
+    .p-profiles .profile-head:after{
+      display: flex;
+    }
+    h1,h2,h3,h4,h5,h6, div, a {
+      color: rgb(220,220,220) !important;
+    }
+    .subheadline { 
+      background: rgba(50,50,50,.7); 
+    }
+    input, select, textarea {
+      color: rgb(200,200,200) !important;
+      background: rgba(40, 50, 50, 0.8) !important; 
+    }
+    .num.order-control {
+      color: rgb(100,100,100) !important;
+    }
+    .headline, .midheadline, .subheadline {
+      border-left: 5px solid rgba(30,30,30,.7) !important;
+    }
+    .title.left_aligned span, p, .main-controls>span {
+      color: rgb(160,160,160) !important;
+      text-shadow: 0px;
+    }
+    .tooltip, .tooltip-inner, .comments-loader, .expand:after, div.shade {
+      background: rgba(50,50,50,.9) !important; 
+    }
+    .b-anime_status_tag.other {
+      background: rgba(20,210,210,.9);
+    }
+    .activity, .lifetime.b-stats_bar, .cc-achievements, .c-additionals,
+    .b-stats_bar.manga, .second, .third, .compatibility, .c-column.c-left ,.c-column>.header>.title{
+      display: none !important;
+    }
+    .b-user.avatar img {
+      width: 100%;
+      padding: 0px;
+      margin-left: 10%;
+    }
+    .linkheadline > a, .headline, .headline > a, .misc-links > a, a.tag-link, .title > span, .status, span.status-name, div.plus, div.trigger-arrow, .b-anime_status_tag.studio, .label>span, .count, .label:before , span:before, time:before, div.text div.status-name:after, div.edit:before{
+      color: rgb(74,74,74) !important;
+      text-shadow: 1px .7px 1px rgba(230,230,230,.9);
+    }
+    .b-user_rate-history, .b-anime_status_tag, .title>span, .subheadline>a , a.b-menu-line>span, li, label, span.b-tag.narrow,
+    span.misc>span{
+      color: rgb(234,234,234) !important;
+      text-shadow: 1px .7px 1px rgba(30,30,30,.9);
+    }
+    s {
+      color: rgb(254, 130, 129) !important;
+    }
+    .b-stats_bar.anime>div.bar {
+      width: 700px !important;
+      height: 400px !important;
+    }
+    .first {
+      color: rgba(0,0,0,0) !important;
+      background: url(https://imgix.ranker.com/user_node_img/50051/1001019806/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/80% no-repeat !important;
+    }
+    header>a>img, div.avatar>img, .first{
+      filter: blur(1px) brightness(120%) contrast(120%) drop-shadow(8px 8px 10px gray);
+    }
+  }
