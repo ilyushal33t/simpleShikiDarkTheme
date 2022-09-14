@@ -1,98 +1,133 @@
-@media only screen and (min-width: 100px) {
+/* updating at https://raw.githubusercontent.com/ilyushal33t/simpleShikiDarkTheme/main/custom_css.css */
+
+:root {
+    --bg-main-color: rgba(30, 30, 30, 0.8);
+    --white: #fff;
+    --display-none: none;
+    --other-bg: rgba(80,80,89,.9);
+    --main-header: rgb(220,220,220);
+    --blur: blur(2px);
+    --border-left: 5px solid rgba(30,30,30,.7);
+    --inputs: rgba(40, 50, 50, 0.8); 
+    --inputs-text: rgb(200,200,200);
+    --mini-blocks-text: rgba(204, 204, 204, .7);
+    --dark-light: rgba(50,50,50,.9);
+    --main-outline: 20px solid rgba(20, 20, 20, .7);
+    --m-b: 20px;
+    --lists: rgb(234,234,234);
+    --main-text-shadow: 1px .7px 1px rgba(30,30,30,.9);
+    --grayscale-mid: grayscale(60%);
+    --avatar-filters: blur(.6px) brightness(110%) contrast(110%) drop-shadow(3px 3px 5px black);
+    --bar-replace-image: url(https://imgix.ranker.com/user_node_img/50051/1001019806/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/80% no-repeat;
+    --body-bg: url(https://p4.wallpaperbetter.com/wallpaper/690/498/544/hello-kitty-wallpaper-preview.jpg) no-repeat fixed center/100%;
+    --l-page-bg: url(https://www.kitnipbox.com/meow/wp-content/uploads/2016/08/WeHeartIt.jpg) top/100%;
+    --favourites-bg: url(https://imgix.ranker.com/user_node_img/50051/1001019803/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/70% no-repeat;
+    --favourites-bg-mobile: url(https://imgix.ranker.com/user_node_img/50051/1001019803/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/100% no-repeat;
+    --cc-3-bg: url(https://imgix.ranker.com/collection_img/1/1523/original/the-art-of-the-selfie-u8) 100% 30% no-repeat;
+    --cc-3-bg-mobile: url(https://imgix.ranker.com/collection_img/1/1523/original/the-art-of-the-selfie-u8) top/200% no-repeat;
+    --user-reply-color: rgb(254, 130, 129);
+  }
+
+  @media only screen and (min-width: 800px) {
     .l-page, .b-quote, .b-modal>.inner { 
-        background-color: rgba(20, 20, 20, 0.8); 
-        color: #fff;
+        background-color: var(--bg-main-color) !important; 
+        color: var(--white) !important;
     } 
     .b-ajax:before { 	    
-        background: rgba(20, 20, 20, 0.8);
+        background: var(--bg-main-color);
     }
     .l-page { 
-      outline: 20px solid rgba(20, 20, 20, .9); margin-bottom: 20px;
+      outline: var(--main-outline);
+      margin-bottom: var(--m-b);
     }
     body, div.cc-3, .c-column.c-right, .l-page { 
-      background-color: rgb(20,20,20);
+      background-color: var(--bg-main-color) !important;
       position: relative;
       z-index: 3;
     }
     body:before, div.cc-3:before, .c-column.c-right:before, .l-page:before {
       content: '';
       z-index: -3;
-      color: #fff;
+      color: var(--white);
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       position: absolute;
       opacity: .4;
-      filter: blur(2px);
+      filter: var(--blur);
     }
     body:before {
-      background: url(https://p4.wallpaperbetter.com/wallpaper/690/498/544/hello-kitty-wallpaper-preview.jpg) no-repeat fixed center/100%;
+      background: var(--body-bg);
     }
     div.cc-3:before {
-      background: url(https://imgix.ranker.com/collection_img/1/1523/original/the-art-of-the-selfie-u8) 100% 30% no-repeat !important;
+      background: var(--cc-3-bg) !important;
     }
     .c-column.c-right {
       width: 100% !important;
     }
     .c-column.c-right:before {
-      background: url(https://imgix.ranker.com/user_node_img/50051/1001019803/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/70% no-repeat !important;
+      background: var(--favourites-bg) !important;
     }
     .l-page:before {
        display: flex !important;
-       background: url(https://www.kitnipbox.com/meow/wp-content/uploads/2016/08/WeHeartIt.jpg) top/100% !important;
-       filter: grayscale(60%);
+       background: var(--l-page-bg) !important;
+       filter: var(--grayscale-mid);
        opacity: .16;
     }
     .p-profiles .profile-head:after{
       display: flex;
     }
-    h1,h2,h3,h4,h5,h6, div, a {
-      color: rgb(220,220,220) !important;
+    h1,h2,h3,h4,h5,h6,div,a {
+      color: var(--main-header) !important;
     }
     .subheadline { 
       background: rgba(50,50,50,.7); 
     }
     input, select, textarea {
-      color: rgb(200,200,200) !important;
-      background: rgba(40, 50, 50, 0.8) !important; 
+      color: var(--inputs-text) !important;
+      background: var(--inputs) !important;
     }
     .num.order-control {
       color: rgb(100,100,100) !important;
     }
     .headline, .midheadline, .subheadline {
-      border-left: 5px solid rgba(30,30,30,.7) !important;
+      border-left: var(--border-left) !important;
     }
-    .title.left_aligned span, p, .main-controls>span {
-      color: rgb(160,160,160) !important;
-      text-shadow: 0px;
+    p, .main-controls>span {
+      color: var(--dark-light) !important;
+    }
+    .navigation-node-all, .navigation-node-positive, .navigation-node-neutral, .navigation-node-negative, .trigger, .b-footer_vote, .b-anime_status_tag, .midheadline, .f-headline, .my-list, .tag-link, .headline, .opinion.positive, .opinion.negative{
+      background: var(--dark-light) !important;
+      border-color: var(--bg-main-color) !important;
     }
     .tooltip, .tooltip-inner, .comments-loader, .expand:after, div.shade {
-      background: rgba(50,50,50,.9) !important; 
+      background: var(--dark-light) !important; 
     }
-    .b-anime_status_tag.other {
-      background: rgba(20,210,210,.9);
+    .b-anime_status_tag.other, .b-link_button.dark  {
+      background: var(--other-bg) !important;
     }
     .activity, .lifetime.b-stats_bar, .cc-achievements, .c-additionals,
     .b-stats_bar.manga, .second, .third, .compatibility, .c-column.c-left ,.c-column>.header>.title{
-      display: none !important;
+      display: var(--display-none) !important;
     }
     .b-user.avatar img {
       width: 100%;
       padding: 0px;
       margin-left: 10%;
     }
-    .linkheadline > a, .headline, .headline > a, .misc-links > a, a.tag-link, .title > span, .status, span.status-name, div.plus, div.trigger-arrow, .b-anime_status_tag.studio, .label>span, .count, .label:before , span:before, time:before, div.text div.status-name:after, div.edit:before{
-      color: rgb(74,74,74) !important;
-      text-shadow: 1px .7px 1px rgba(230,230,230,.9);
+    .linkheadline > a, .headline, .headline > a, .misc-links > a, a.tag-link, .title > span, .status, span.status-name, div.plus, div.trigger-arrow, .b-anime_status_tag.studio, .label>span, .count, .label:before , span:before, time:before, div.text div.status-name:after, div.edit:before, .vote.yes,.vote.no, .b-footer_vote>div, .vote>span,
+    .b-anime_status_tag{
+      color: var(--mini-blocks-text) !important;
+      text-shadow: var(--main-text-shadow);
     }
     .b-user_rate-history, .b-anime_status_tag, .title>span, .subheadline>a , a.b-menu-line>span, li, label, span.b-tag.narrow,
-    span.misc>span{
-      color: rgb(234,234,234) !important;
-      text-shadow: 1px .7px 1px rgba(30,30,30,.9);
+    span.misc>span {
+      color: var(--lists) !important;
+      text-shadow: (--main-text-shadow);
     }
     s {
-      color: rgb(254, 130, 129) !important;
+      color: var(--user-reply-color) !important;
     }
     .b-stats_bar.anime>div.bar {
       width: 700px !important;
@@ -100,9 +135,119 @@
     }
     .first {
       color: rgba(0,0,0,0) !important;
-      background: url(https://imgix.ranker.com/user_node_img/50051/1001019806/original/1-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650) center/80% no-repeat !important;
+      background: var(--bar-replace-image) !important;
     }
-    header>a>img, div.avatar>img, .first{
-      filter: blur(1px) brightness(120%) contrast(120%) drop-shadow(8px 8px 10px gray);
+   header>a>img, div.avatar>img, .first{
+      filter: var(--avatar-filters);
+    } 
+  }
+  
+  /************************** Mobile optimization *************/
+  @media only screen and (max-width: 800px) {
+    .l-page, .b-quote, .b-modal>.inner { 
+        background-color: var(--bg-main-color) !important; 
+        color: var(--white) !important;
+    } 
+    .b-ajax:before { 	    
+        background: var(--bg-main-color);
+    }
+    .l-page { 
+      outline: var(--main-outline);
+      margin-bottom: var(--m-b);
+    }
+    body, div.cc-3, .c-column.c-right, .l-page { 
+      background-color: var(--bg-main-color) !important;
+      position: relative;
+      z-index: 3;
+    }
+    body:before, div.cc-3:before, .c-column.c-right:before, .l-page:before {
+      content: '';
+      z-index: -3;
+      color: var(--white);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      opacity: .4;
+    }
+    body:before {
+      background: none;
+    }
+    div.cc-3:before {
+      background: var(--cc-3-bg-mobile) !important;
+    }
+    .c-column.c-right {
+      width: 100% !important;
+    }
+    .c-column.c-right:before {
+      background: var(--favourites-bg-mobile) !important;
+    }
+    .l-page:before {
+       display: flex !important;
+       background: var(--l-page-bg) !important;
+       filter: var(--grayscale-mid);
+       opacity: .16;
+    }
+    .p-profiles .profile-head:after{
+      display: flex;
+    }
+    h1,h2,h3,h4,h5,h6,div,a {
+      color: var(--main-header) !important;
+    }
+    .subheadline { 
+      background: rgba(50,50,50,.7); 
+    }
+    input, select, textarea {
+      color: var(--inputs-text) !important;
+      background: var(--inputs) !important;
+    }
+    .num.order-control {
+      color: rgb(100,100,100) !important;
+    }
+    .headline, .midheadline, .subheadline {
+      border-left: var(--border-left) !important;
+    }
+   p, .main-controls>span {
+      color: var(--paragraphs) !important;
+    }
+   .navigation-node-all, .navigation-node-positive, .navigation-node-neutral, .navigation-node-negative, .trigger, .b-footer_vote, .b-anime_status_tag, .midheadline, .f-headline, .my-list, .tag-link, .headline, .opinion.positive, .opinion.negative{
+      background: var(--dark-light) !important;
+      border-color: var(--bg-main-color) !important;
+    }
+    .tooltip, .tooltip-inner, .comments-loader, .expand:after, div.shade {
+      background: var(--dark-light) !important; 
+    }
+    .b-anime_status_tag.other, .b-link_button.dark  {
+      background: var(--other-bg) !important;
+    }
+    .activity, .lifetime.b-stats_bar, .cc-achievements, .c-additionals,
+    .b-stats_bar.manga, .second, .third, .compatibility, .c-column.c-left ,.c-column>.header>.title{
+      display: var(--display-none) !important;
+    }
+    .b-user.avatar img {
+      width: 100%;
+      padding: 0px;
+      margin-left: 10%;
+    }
+    .linkheadline > a, .headline, .headline > a, .misc-links > a, a.tag-link, .title > span, .status, span.status-name, div.plus, div.trigger-arrow, .b-anime_status_tag.studio, .label>span, .count, .label:before , span:before, time:before, div.text div.status-name:after, div.edit:before, .vote.yes,.vote.no, .b-footer_vote>div, .vote>span,
+    .b-anime_status_tag{
+      color: var(--mini-blocks-text) !important;
+    }
+      .b-user_rate-history, .b-anime_status_tag, .title>span, .subheadline>a , a.b-menu-line>span, li, label, span.b-tag.narrow,
+    span.misc>span {
+      color: var(--lists) !important;
+    }
+    s {
+      color: var(--user-reply-color) !important;
+    }
+    .b-stats_bar.anime>div.bar {
+      margin: -10% auto !important;
+      width: 500px !important;
+      height: 500px !important;
+    }
+    .first {
+      color: rgba(0,0,0,0) !important;
+      background: var(--bar-replace-image) !important;
     }
   }
